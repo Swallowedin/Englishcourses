@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprendre les Phrasal Verbs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #verb {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+        #meaning, #example {
+            margin-bottom: 10px;
+        }
+        #progress {
+            background-color: #e0e0e0;
+            border-radius: 13px;
+            padding: 3px;
+            margin-top: 20px;
+        }
+        #progress-bar {
+            height: 20px;
+            background-color: #4CAF50;
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.5s ease-in-out;
+        }
+        #score {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Apprendre les Phrasal Verbs</h1>
+        <select id="theme-select">
+            <option value="reunion">Réunion professionnelle</option>
+            <option value="quotidien">Vie quotidienne</option>
+            <option value="voyage">Voyage</option>
+            <option value="technologie">Technologie</option>
+            <option value="relations">Relations interpersonnelles</option>
+            <option value="education">Apprentissage et éducation</option>
+        </select>
+        <div id="verb"></div>
+        <div id="meaning" style="display: none;"></div>
+        <div id="example" style="display: none;"></div>
+        <button id="show-meaning">Afficher la signification</button>
+        <button id="next-verb">Suivant</button>
+        <button id="known-verb">Je connais celui-ci</button>
+        <div id="progress"><div id="progress-bar"></div></div>
+        <div id="score">Progrès: 0/50</div>
+    </div>
+    <script src="phrasal-verbs.js"></script>
+</body>
+</html>
