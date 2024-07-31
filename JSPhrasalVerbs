@@ -1,0 +1,74 @@
+// Liste des phrasal verbs et thèmes
+const allPhrasalVerbs = [
+    { id: 1, verb: 'give up', meaning: 'abandonner', example: 'Don\'t give up on your dreams.' },
+    { id: 2, verb: 'look after', meaning: 'prendre soin de', example: 'Can you look after my cat while I\'m away?' },
+    // ... (ajoutez tous les 250 phrasal verbs ici)
+];
+
+const themes = {
+    "reunion": [
+        "bring up", "point out", "sum up", "go over", "wrap up", "set up", "call off", "put off",
+        // ... (ajoutez tous les verbes pour ce thème)
+    ],
+    "quotidien": [
+        "wake up", "get up", "turn off", "put on", "take off", "go out", "come back", "pick up",
+        // ... (ajoutez tous les verbes pour ce thème)
+    ],
+    // ... (ajoutez les autres thèmes)
+};
+
+let currentTheme = "reunion";
+let currentVerbs = [];
+let currentVerbIndex = 0;
+let score = 0;
+
+function initializeApp() {
+    document.getElementById('theme-select').addEventListener('change', changeTheme);
+    document.getElementById('show-meaning').addEventListener('click', showMeaning);
+    document.getElementById('next-verb').addEventListener('click', nextVerb);
+    document.getElementById('known-verb').addEventListener('click', knownVerb);
+
+    changeTheme();
+}
+
+function changeTheme() {
+    currentTheme = document.getElementById('theme-select').value;
+    currentVerbs = themes[currentTheme].map(verb => allPhrasalVerbs.find(v => v.verb === verb)).filter(v => v !== undefined);
+    currentVerbIndex = 0;
+    score = 0;
+    updateDisplay();
+    updateProgress();
+}
+
+function showMeaning() {
+    document.getElementById('meaning').style.display = 'block';
+    document.getElementById('example').style.display = 'block';
+}
+
+function nextVerb() {
+    currentVerbIndex = (currentVerbIndex + 1) % currentVerbs.length;
+    updateDisplay();
+}
+
+function knownVerb() {
+    score++;
+    nextVerb();
+    updateProgress();
+}
+
+function updateDisplay() {
+    const currentVerb = currentVerbs[currentVerbIndex];
+    document.getElementById('verb').textContent = currentVerb.verb;
+    document.getElementById('meaning').textContent = `Signification: ${currentVerb.meaning}`;
+    document.getElementById('example').textContent = `Exemple: ${currentVerb.example}`;
+    document.getElementById('meaning').style.display = 'none';
+    document.getElementById('example').style.display = 'none';
+}
+
+function updateProgress() {
+    const progressPercentage = (score / currentVerbs.length) * 100;
+    document.getElementById('progress-bar').style.width = `${progressPercentage}%`;
+    document.getElementById('score').textContent = `Progrès: ${score}/${currentVerbs.length}`;
+}
+
+window.onload = initializeApp;
