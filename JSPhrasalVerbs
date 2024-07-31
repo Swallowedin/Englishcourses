@@ -8,13 +8,59 @@ const allPhrasalVerbs = [
 const themes = {
     "reunion": [
         "bring up", "point out", "sum up", "go over", "wrap up", "set up", "call off", "put off",
-        // ... (ajoutez tous les verbes pour ce thème)
+    "follow up", "think through", "speak up", "cut in", "go ahead", "get across", "break down",
+    "come up with", "draw up", "hand out", "take down", "run through", "carry out", "lay out",
+    "bring in", "rule out", "put forward", "take on", "iron out", "hammer out", "bring about",
+    "get through", "touch base", "zero in", "sign off", "build on", "flesh out", "follow through",
+    "get behind", "kick off", "move forward", "nail down", "open up", "push through", "reach out",
+    "roll out", "scale up", "stand out", "step up", "talk through", "tie up", "wind up"
     ],
     "quotidien": [
         "wake up", "get up", "turn off", "put on", "take off", "go out", "come back", "pick up",
-        // ... (ajoutez tous les verbes pour ce thème)
-    ],
-    // ... (ajoutez les autres thèmes)
+    "drop off", "run out of", "look after", "clean up", "throw away", "hang up", "call back",
+    "stop by", "check out", "fill up", "turn down", "set aside", "put away", "get along",
+    "look for", "try on", "figure out", "work out", "eat out", "stay in", "show up", "dress up",
+    "wind down", "tune in", "switch off", "stock up", "sort out", "sleep in", "run into",
+    "plug in", "pay off", "order in", "move in", "let in", "keep up", "give away", "get around",
+    "end up", "do over", "cool down", "catch up", "bring back"
+"Voyage": [
+    "set off", "take off", "check in", "check out", "get in", "get off", "look around",
+    "pack up", "drop by", "get around", "look forward to", "plan ahead", "book in", "fill out",
+    "hold up", "make for", "set out", "stop over", "take in", "turn back", "wind up", "head off",
+    "break down", "catch up", "get by", "run into", "touch down", "back out", "call off",
+    "chill out", "figure out", "hang out", "keep up", "map out", "reach out", "set up",
+    "show around", "start off", "stay over", "take on", "try out", "wash up", "work out",
+    "get away", "go through", "look up", "pick up", "settle in", "sign in", "speed up"
+  ],
+  "Technologie": [
+    "log in", "log out", "sign up", "set up", "back up", "shut down", "turn on", "turn off",
+    "plug in", "update", "download", "upload", "check out", "click on", "zoom in", "zoom out",
+    "scroll down", "scroll up", "print out", "fill in", "type in", "cut off", "hook up",
+    "power up", "boot up", "load up", "speed up", "slow down", "break down", "crash", "debug",
+    "roll out", "scale up", "phase out", "opt out", "sync up", "link up", "pair up", "key in",
+    "block out", "filter out", "build in", "burn out", "max out", "time out", "wire up",
+    "patch up", "lock down", "hack into", "lean in", "tune out"
+  ],
+  "Relations interpersonnelles": [
+    "get along", "fall out", "make up", "break up", "look up to", "put up with", "stand by",
+    "let down", "open up", "reach out", "fall for", "go out", "hang out", "hit it off",
+    "keep in touch", "look after", "make out", "put down", "stand up for", "take after",
+    "turn to", "back up", "bring together", "call on", "catch up", "come across", "drift apart",
+    "get through to", "give in", "grow apart", "hold back", "keep up with", "leave out",
+    "look down on", "make fun of", "put off", "run into", "stick up for", "take up",
+    "talk over", "throw off", "warm up to", "work out", "act up", "blow off", "butter up",
+    "calm down", "cheer up", "come on"
+  ],
+  "Apprentissage et éducation": [
+    "find out", "figure out", "look up", "write down", "take in", "work out", "catch on",
+    "brush up on", "catch up", "drop out", "get through", "give up", "keep up", "look into",
+    "make out", "pick up", "read up on", "take on", "think through", "work on", "add up",
+    "break down", "come across", "come up with", "fill in", "get at", "go over", "jot down",
+    "lay out", "make sense of", "point out", "put across", "run through", "set out", "sum up",
+    "take down", "think over", "try out", "turn in", "wrap up", "ace", "bone up on",
+    "cram for", "dive into", "get the hang of", "hit the books", "knuckle down", "make headway",
+    "soak up", "zone out"
+  ]
 };
 
 let currentTheme = "reunion";
